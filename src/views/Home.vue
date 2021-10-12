@@ -1,8 +1,7 @@
 <template>
   <div>
-    <h1>Balance</h1>
+    <h1 style="margin: 0;">Balance</h1>
     <balance-label></balance-label>
-    <br>
     <money-menu></money-menu>
   </div>
 </template>

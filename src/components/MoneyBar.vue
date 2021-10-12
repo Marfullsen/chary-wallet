@@ -65,7 +65,7 @@ export default {
 <style>
 .centrado {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 </style>

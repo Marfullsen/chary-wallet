@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>{{ balance }}</h1>
+  <div class="centrado">
+    <h1 class="title">${{ balance }}</h1>
   </div>
 </template>
 
@@ -16,5 +16,9 @@ export default {
 </script>
 
 <style scoped>
-
+.title {
+  border: solid 1px black;
+  width: 200px;
+  margin: 0;
+}
 </style>
