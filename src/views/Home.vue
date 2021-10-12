@@ -1,18 +1,22 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <h1>Balance</h1>
+    <balance-label></balance-label>
+    <br>
+    <money-menu></money-menu>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import BalanceLabel from '@/components/BalanceLabel.vue';
+import MoneyMenu from '../components/MoneyMenu.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    BalanceLabel,
+    MoneyMenu,
   },
 };
 </script>
