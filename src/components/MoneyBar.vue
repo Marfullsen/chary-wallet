@@ -52,11 +52,11 @@ export default {
   methods: {
     reduceBalance() {
       this.balance -= this.value;
-      localStorage.setItem('balance', this.value);
+      localStorage.setItem('balance', this.balance);
     },
     increaseBalance() {
       this.balance += this.value;
-      localStorage.setItem('balance', this.value);
+      localStorage.setItem('balance', this.balance);
     },
   },
 };
