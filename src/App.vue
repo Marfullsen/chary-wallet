@@ -1,25 +1,25 @@
 <template>
 <div class="nav desktop">
     <router-link to="/history"
-      ><Icon icon="simple-line-icons:notebook" width="30"
+      ><Icon icon="simple-line-icons:hourglass" width="25"
     />&nbsp;History</router-link>
     <router-link to="/"
       ><Icon icon="simple-line-icons:wallet" width="40"
     />&nbsp;Home</router-link>
     <router-link to="/recent"
-      ><Icon icon="simple-line-icons:hourglass" width="25"
+      ><Icon icon="simple-line-icons:notebook" width="30"
     />&nbsp;Recent</router-link>
   </div>
   <router-view />
   <div id="nav" class="nav mobile">
     <router-link to="/history"
-      ><Icon icon="simple-line-icons:notebook" width="30"
+      ><Icon icon="simple-line-icons:hourglass" width="25"
     /></router-link>
     <router-link to="/"
       ><Icon icon="simple-line-icons:wallet" width="40"
     /></router-link>
     <router-link to="/recent"
-      ><Icon icon="simple-line-icons:hourglass" width="25"
+      ><Icon icon="simple-line-icons:notebook" width="30"
     /></router-link>
   </div>
 </template>
