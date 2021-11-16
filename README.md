@@ -91,3 +91,4 @@ See also the list of [contributors](./contributors) who participated in this pro
 
 - [All Emojis](https://github.com/scotch-io/All-Github-Emoji-Icons)
 - [VsCode Readme Ext](https://github.com/thomascsd/vscode-readme-pattern)
+- [How To Use Chart.js with Vue.js](https://www.digitalocean.com/community/tutorials/vuejs-vue-chart-js)
