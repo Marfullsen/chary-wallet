@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="centrado">
-      <Icon icon="mdi:cash-remove" color="#8c114e" width="100" />
-      <Icon icon="mdi:cash-plus" color="#118c4f" width="100" />
+      <Icon icon="mdi:cash-remove" color="#8c114e" width="70" />
+      <Icon icon="mdi:cash-plus" color="#118c4f" width="70" />
     </div>
     <money-bar :value="20000" color="#D24C29" type="bill"></money-bar>
     <money-bar :value="10000" color="#2D639F" type="bill"></money-bar>
