@@ -1,16 +1,22 @@
-# 💸 Chary Wallet 💰
+<h1 align="center">💸 Chary Wallet 💰</h1>
 
-[![Vue-3.2.4](https://img.shields.io/badge/Vue-3.2.4-blue.svg "Badge1")](https://github.com/vuejs/vue)
-[![Vue-cli-4.5.13](https://img.shields.io/badge/Vue--CLI-4.5.13-brightgreen.svg "Badge2")](https://github.com/vuejs/vue)
-[![Vue-router-4.0.11](https://img.shields.io/badge/Vue--router-4.0.11-yellow.svg "Badge3")](https://github.com/vuejs/vue)
+<div align="center">
+
+[![Vue-3.2.4](https://img.shields.io/badge/Vue-3.2.4-blue.svg "Badge Vue.js")](https://v3.vuejs.org/)
+[![Vue-cli-4.5.13](https://img.shields.io/badge/Vue--CLI-4.5.13-brightgreen.svg "Badge VueCLI")](https://cli.vuejs.org/)
+[![Vue-router-4.0.11](https://img.shields.io/badge/Vue--router-4.0.11-yellow.svg "Badge VueRouter")](https://router.vuejs.org/)
+
+</div>
+
+<p align="center">
+  Digital Wallet Memo to keep the accounts of your finances. 💸💰👛
+</p>
 
 <p align="center">
   <a href="./docs/img/Chary-Wallet.drawio.png" rel="noopener">
     <img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
   </a>
 </p>
-
-Digital Wallet Memo to keep the accounts of your finances. 💸💰👛
 
 ## 📝 Table of Contents 📂
 
