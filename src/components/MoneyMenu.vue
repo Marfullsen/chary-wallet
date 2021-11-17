@@ -36,6 +36,48 @@ export default {
     Icon,
     MoneyBar,
   },
+  data() {
+    return {
+      amount: this.$amount,
+      balance: this.$balanceGlobal,
+    };
+  },
+  methods: {
+    increase() {
+      if (this.amount) {
+        // Update global value 'balance'.
+        this.balance += this.amount;
+        localStorage.setItem('balance', this.balance);
+
+        // Update global movements data.
+        let now = new Date(Date.now());
+        now = `${now.toLocaleString()}:${now.getMilliseconds()}`;
+        const transaction = [now, '', this.amount];
+        const movementsData = localStorage.getItem('movementsData');
+        let movements = JSON.parse(movementsData);
+        movements.push(transaction);
+        movements = JSON.stringify(movements);
+        localStorage.setItem('movementsData', movements);
+
+        // Reset the accumulator.
+        this.amount = 0;
+      }
+    },
+    cancel() {
+      this.amount = 0;
+    },
+    lookForPreviousData() {
+      const movementsData = localStorage.getItem('movementsData');
+      if (movementsData) {
+        this.movements = JSON.parse(movementsData);
+      } else {
+        localStorage.setItem('movementsData', '[]');
+      }
+    },
+  },
+  mounted() {
+    this.lookForPreviousData();
+  },
 };
 </script>
 
