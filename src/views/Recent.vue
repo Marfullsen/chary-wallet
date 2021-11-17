@@ -2,7 +2,7 @@
   <div>
     <h1 style="margin: 0">Recent</h1>
     <table id="wallet">
-      <tr style="display: none">
+      <tr class="hide">
         <th>Optional Label</th>
         <th>Date of transaction</th>
         <th>Amount</th>
@@ -10,42 +10,75 @@
       <tr>
         <td class="opt-label"></td>
         <td>
-          <h1>
-            Pan
-          </h1>
-          <h2>
-            20-09-2021
-          </h2>
+         <b>Cash</b>
         </td>
         <td>
           <span class="till">
-            1.000
+            {{ clp(this.balance, '$') }}
           </span>
           </td>
       </tr>
-      <tr>
-        <td class="opt-label"></td>
-        <td>20-09-2021</td>
+      <tr v-for="transaction, i in transactions.slice().reverse()" :key="i">
+        <td class="opt-label">{{transaction[1]}}</td>
+        <td>{{transaction[0]}}</td>
         <td>
-          <span class="outgo">
-            -19.000
+          <span
+            :class="
+            transaction[2] < 0
+              ? 'outgo'
+              : transaction[2] > 0
+              ? 'income'
+              : 'till'
+            ">
+            {{ clp(transaction[2]) }}
           </span>
-          </td>
-      </tr>
-      <tr>
-        <td class="opt-label"></td>
-        <td>20-09-2021</td>
-        <td>
-          <span class="income">
-            +20.000
-          </span>
-          </td>
+        </td>
       </tr>
     </table>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      balance: this.$balanceGlobal,
+      transactions: [],
+    };
+  },
+  methods: {
+    toDate(dateString) {
+      // dateString example could be '2021-11-16 01:02:03'
+      const reggie = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/;
+      const [, year, month, day, hours, minutes, seconds] = reggie.exec(dateString);
+      const dateObject = new Date(year, month - 1, day, hours, minutes, seconds);
+      return dateObject;
+    },
+    lookForPreviousData() {
+      const movementsData = localStorage.getItem('movementsData');
+      if (movementsData) {
+        this.transactions = JSON.parse(movementsData);
+      } else {
+        localStorage.setItem('movementsData', '[]');
+      }
+    },
+    clp(amount, sign = '') {
+      const pointSeparator = (Number(amount)).toLocaleString('es-cl');
+      return `${sign}${pointSeparator}`;
+    },
+  },
+  mounted() {
+    this.lookForPreviousData();
+  },
+};
+</script>
+
 <style scoped>
+
+.hide {
+  display: none;
+}
+
 .income {
   padding: 8px;
   border-radius: 15px;
