@@ -12,13 +12,13 @@ export default {
   mounted() {
     const ctx = document.getElementById('weekly-chart');
     const data = {
-      type: 'doughnut',
+      type: 'bar',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         datasets: [
           {
-            label: '# of nothing',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Weekly',
+            data: [12, 19, 3, 5, 7, 3, 5],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -26,6 +26,7 @@ export default {
               'rgba(75, 192, 192, 0.2)',
               'rgba(153, 102, 255, 0.2)',
               'rgba(255, 159, 64, 0.2)',
+              'rgba(55, 255, 255, 0.2)',
             ],
             borderColor: [
               'rgba(255, 99, 132, 1)',
@@ -34,6 +35,7 @@ export default {
               'rgba(75, 192, 192, 1)',
               'rgba(153, 102, 255, 1)',
               'rgba(255, 159, 64, 1)',
+              'rgba(55, 255, 255, 1)',
             ],
             borderWidth: 1,
           },
