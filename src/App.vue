@@ -1,5 +1,5 @@
 <template>
-<div class="nav desktop">
+  <div class="nav desktop">
     <router-link to="/history"
       ><Icon icon="simple-line-icons:hourglass" width="25"
     />&nbsp;History</router-link>
@@ -82,6 +82,11 @@ export default {
 @media (min-width: 1024px) {
   .desktop {
     display: flex;
+  }
+  #app {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
   }
   .mobile {
     display: none;
