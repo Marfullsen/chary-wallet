@@ -51,7 +51,7 @@ export default {
 
         // Update global movements data.
         let now = new Date(Date.now());
-        now = `${now.toLocaleString()}:${now.getMilliseconds()}`;
+        now = now.toLocaleString();
         const transaction = [now, '', this.amount];
         const movementsData = localStorage.getItem('movementsData');
         let movements = JSON.parse(movementsData);
