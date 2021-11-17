@@ -1,8 +1,19 @@
 <template>
   <div>
     <div class="centrado">
-      <Icon icon="mdi:cash-remove" color="#8c114e" width="70" />
-      <Icon icon="mdi:cash-plus" color="#118c4f" width="70" />
+      <Icon icon="simple-line-icons:close" @click="cancel" color="#8c114e" width="70" />
+      <label
+        class="badge"
+        :class="
+          amount < 0
+            ? 'negativeAmount'
+            : amount > 0
+            ? 'positiveAmount'
+            : 'zeroAmount'
+        "
+        v-text="'$' + amount"
+      ></label>
+      <Icon icon="simple-line-icons:check" @click="increase" color="#118c4f" width="70" />
     </div>
     <money-bar :value="20000" color="#D24C29" type="bill"></money-bar>
     <money-bar :value="10000" color="#2D639F" type="bill"></money-bar>
@@ -29,5 +40,18 @@ export default {
 </script>
 
 <style>
+.badge {
+  padding: 8px;
+  border-radius: 15px;
+}
 
+.negativeAmount {
+  background: rgba(255, 99, 132, 0.2);
+}
+.positiveAmount {
+  background: rgba(75, 192, 192, 0.2);
+}
+.zeroAmount {
+  background: rgba(54, 162, 235, 0.2);
+}
 </style>
