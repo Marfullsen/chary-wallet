@@ -1,6 +1,6 @@
 <template>
   <div class="centrado">
-    <h1 class="title">${{ balance }}</h1>
+    <h1 class="title">${{ (Number(balance)).toLocaleString('es-cl') }}</h1>
   </div>
 </template>
 
