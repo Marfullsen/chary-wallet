@@ -2,14 +2,14 @@
   <div class="centrado">
     <Icon
       v-if="type === 'bill'"
-      @click="reduceBalance"
+      @click="reduceAmount"
       icon="mdi:cash"
       :color="color"
       width="80"
     />
     <Icon
       v-else
-      @click="reduceBalance"
+      @click="reduceAmount"
       icon="jam:coin"
       :color="color"
       width="50"
@@ -17,14 +17,14 @@
     <label v-text="'$' + value"></label>
     <Icon
       v-if="type === 'bill'"
-      @click="increaseBalance"
+      @click="increaseAmount"
       icon="mdi:cash"
       :color="color"
       width="80"
     />
     <Icon
       v-else
-      @click="increaseBalance"
+      @click="increaseAmount"
       icon="jam:coin"
       :color="color"
       width="50"
@@ -46,17 +46,15 @@ export default {
   },
   data() {
     return {
-      balance: this.$balanceGlobal,
+      amount: this.$amount,
     };
   },
   methods: {
-    reduceBalance() {
-      this.balance -= this.value;
-      localStorage.setItem('balance', this.balance);
+    reduceAmount() {
+      this.amount -= this.value;
     },
-    increaseBalance() {
-      this.balance += this.value;
-      localStorage.setItem('balance', this.balance);
+    increaseAmount() {
+      this.amount += this.value;
     },
   },
 };
