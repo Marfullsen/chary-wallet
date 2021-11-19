@@ -2,26 +2,34 @@
   <div>
     <h1 style="margin: 0">Recent</h1>
     <table id="wallet">
-      <tr class="hide">
-        <th>Optional Label</th>
-        <th>Date of transaction</th>
-        <th>Amount</th>
-      </tr>
       <tr>
-        <td class="opt-label"></td>
-        <td>
+        <th>
          <b>Cash</b>
-        </td>
-        <td>
+        </th>
+        <th>
           <span class="till">
             {{ clp(this.balance, '$') }}
           </span>
-          </td>
+          </th>
       </tr>
       <tr v-for="transaction, i in transactions.slice().reverse()" :key="i">
-        <td class="opt-label">{{transaction[1]}}</td>
-        <td>{{transaction[0]}}</td>
-        <td>
+        <td class="centrado">
+          <label class="centrado">
+            <input type="checkbox"  />
+            <div class="card">
+              <!-- Transaction
+                sub 0 is the date
+                sub 1 is the optional name
+                sub 2 is the amount
+              -->
+              <div v-if="transaction[1]" class="front">{{transaction[1]}}</div>
+              <div v-else class="front muted-text">{{transaction[0]}}</div>
+              <div v-if="transaction[1]" class="back">{{transaction[0]}}</div>
+              <div v-else class="back">No message</div>
+            </div>
+          </label>
+        </td>
+        <td class="second-col">
           <span
             :class="
             transaction[2] < 0
@@ -47,13 +55,6 @@ export default {
     };
   },
   methods: {
-    toDate(dateString) {
-      // dateString example could be '2021-11-16 01:02:03'
-      const reggie = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/;
-      const [, year, month, day, hours, minutes, seconds] = reggie.exec(dateString);
-      const dateObject = new Date(year, month - 1, day, hours, minutes, seconds);
-      return dateObject;
-    },
     lookForPreviousData() {
       const movementsData = localStorage.getItem('movementsData');
       if (movementsData) {
@@ -79,6 +80,10 @@ export default {
   display: none;
 }
 
+.second-col {
+  width: 35%;
+}
+
 .income {
   padding: 8px;
   border-radius: 15px;
@@ -102,7 +107,7 @@ export default {
 }
 
 #wallet {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--global-font-family-secondary);
   border-collapse: collapse;
   width: 100%;
   border-radius: 1em;
@@ -126,8 +131,79 @@ export default {
 #wallet th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
-  background-color: #04aa6d;
-  color: white;
 }
+
+/* Card flip effect with no JavaScript */
+label {
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  display: block;
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+}
+
+.card {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: all 600ms;
+  transition: all 600ms;
+  z-index: 20;
+}
+
+.card div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background: #fff; */
+  text-align: center;
+  line-height: 25px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 2px;
+}
+
+.card .back {
+  /* background: #fff; */
+  color: #779fa1;
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+label:hover .card {
+  -webkit-transform: rotateX(20deg);
+  transform: rotateX(20deg);
+}
+
+input {
+  display: none;
+}
+
+:checked + .card {
+  transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+  transform: rotateX(160deg);
+  -webkit-transform: rotateX(160deg);
+}
+
+.front, .back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  label {
+    height: 25px;
+  }
+}
+
 </style>
