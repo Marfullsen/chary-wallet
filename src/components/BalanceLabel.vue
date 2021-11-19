@@ -17,8 +17,11 @@ export default {
 
 <style scoped>
 .title {
-  border: solid 1px black;
+  font-family: var(--global-font-family-secondary);
+  border: ridge 1px black;
+  border-width: 1px 0px 1px 0;
   width: 200px;
   margin: 0;
+  background: white;
 }
 </style>
