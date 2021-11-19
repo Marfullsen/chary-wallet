@@ -35,8 +35,52 @@ export default {
 </script>
 
 <style>
+:root {
+    --global-font-family: 'Architects Daughter', Helvetica, Arial, Verdana, sans-serif;
+    --global-font-family-secondary: 'Rubik', Helvetica, Arial, Verdana, sans-serif;
+    --global-text-color: #222;
+    --global-primary-title-size: 2rem;
+    --global-color-primary: #88498f;
+    --global-color-secondary: #779fa1;
+    --global-color-warning: #e28413;
+    --global-color-danger: #ff6542;
+    --global-background-color: white;
+}
+.bg-color {
+  background: var(--global-bg-color, white)
+}
+.muted-text {
+  color: #779fa1;
+}
+.pointer {
+  cursor: pointer;
+}
+* {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Safari */
+    -khtml-user-select: none;    /* Konqueror HTML */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.sticky {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.centrado {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+
 #app {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--global-font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
