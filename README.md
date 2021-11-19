@@ -111,3 +111,25 @@ See also the list of [contributors](./contributors) who participated in this pro
 - Gist [git add -p is your friend](https://gist.github.com/mattlewissf/9958704)
 - [Bootstrap Containers with Sass mixins](https://getbootstrap.com/docs/5.0/layout/containers/#sass)
 - [Detect long press button JS](https://stackoverflow.com/questions/28320937/count-seconds-on-button-long-press-in-javascript)
+- [Split in js](https://www.w3schools.com/jsref/jsref_split.asp)
+- [Long press jQuery adapted to Vanilla Js](https://stackoverflow.com/a/68878292/15466047)
+- [Mouse up and mouse down in Vue3](https://forum.vuejs.org/t/mouseup-not-working-after-mousedown/75636)
+- [Events on Vue3](https://v3.vuejs.org/guide/events.html#listening-to-events)
+- <del>[Detecting Long press](https://www.vuescript.com/detect-long-press/)</del>
+- <del>[Vue3-directive-long-press-Felicious](https://github.com/FeliciousX/vue-directive-long-press)</del>
+- <del>[LongPress packet](https://www.npmjs.com/package/vue-directive-long-press)</del>
+- <del>[Example of LongPress npm packet](https://stackblitz.com/edit/vue-directive-long-press-demo?file=index.html)</del>
+- ~~[Directives Vue3](https://v3.vuejs.org/guide/custom-directive.html#intro)~~
+- [JavaScript Popup Boxes - Prompt box](https://www.w3schools.com/js/js_popup.asp)
+- [Add images to a component in Vue3](https://stackoverflow.com/questions/45116796/how-to-import-and-use-image-in-a-vue-single-file-component)
+- [v-model in Vue3](https://v3.vuejs.org/guide/migration/v-model.html)
+- [How to center a placeholder inside an input](https://stackoverflow.com/questions/12114570/how-to-align-texts-inside-of-an-input)
+- [Css forms w3](https://www.w3schools.com/css/css_form.asp)
+- [Global variables in CSS](https://medium.com/front-end-weekly/theming-with-css-variables-e4f30343c7c7)
+- [Font 'Rubik'](https://fonts.google.com/specimen/Rubik)
+- [Font 'Architects Daughter' by Kimberly Geswein](https://fonts.google.com/specimen/Architects+Daughter)
+- [Flip an image with css](https://www.w3schools.com/howto/howto_css_flip_card.asp)
+- [Flip an image without JavaScript](https://codepen.io/ecargnfx/pen/jONyGWg)
+- [Press enter to submit with Vue3](https://www.codegrepper.com/code-examples/html/vue+3+enter+key)
+- [Avoid text selection CSS](https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting)
+- [Transform Style CSS](https://developer.mozilla.org/es/docs/Web/CSS/transform-style)
