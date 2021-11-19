@@ -1,52 +1,92 @@
 <template>
   <div>
-    <div class="centrado">
-      <Icon icon="simple-line-icons:close" @click="cancel" color="#8c114e" width="70" />
-      <label
-        class="badge"
-        :class="
-          amount < 0
-            ? 'negativeAmount'
-            : amount > 0
-            ? 'positiveAmount'
-            : 'zeroAmount'
-        "
-        v-text="'$' + amount"
-      ></label>
-      <Icon
-        icon="simple-line-icons:check"
-        @mousedown="onClick_or_LongPress"
-        @mouseup="onClick_or_LongPress"
-        color="#118c4f"
-        width="70"
-      />
-    </div>
-    <money-bar :value="20000" color="#D24C29" type="bill"></money-bar>
-    <money-bar :value="10000" color="#2D639F" type="bill"></money-bar>
-    <money-bar :value="5000" color="#E87A87" type="bill"></money-bar>
-    <money-bar :value="2000" color="#655A7A" type="bill"></money-bar>
-    <money-bar :value="1000" color="#beca9a" type="bill"></money-bar>
-    <money-bar :value="500" color="orange" type="coin"></money-bar>
-    <money-bar :value="100" color="orange" type="coin"></money-bar>
-    <money-bar :value="50" color="orange" type="coin"></money-bar>
-    <money-bar :value="10" color="orange" type="coin"></money-bar>
+    <section class="sticky bg-color">
+      <h1 style="margin: 0;">Balance</h1>
+      <balance-label></balance-label>
+      <div class="centrado">
+        <Icon
+          icon="gg:trash"
+          @click="cancel"
+          color="#8c114e"
+          class="pointer"
+          width="70"
+        />
+        <div class="col marginY">
+          <label
+            class="badge"
+            :class="
+              amount < 0
+                ? 'negativeAmount'
+                : amount > 0
+                ? 'positiveAmount'
+                : 'zeroAmount'
+            "
+            v-text="'$' + amount"
+          ></label>
+          <input
+            @keyup.enter="DoTransaction(this.msg)"
+            type="text"
+            class="text-center"
+            v-model="msg" :class="amount || 'hide'"
+            placeholder="Optional message"
+          >
+        </div>
+        <Icon
+          icon="line-md:confirm-circle"
+          @mousedown="onClick_or_LongPress"
+          @mouseup="onClick_or_LongPress"
+          color="#118c4f"
+          class="pointer"
+          width="70"
+        />
+      </div>
+    </section>
+    <money-item :value="20000" color="#D24C29"
+      :img_src="require('@/assets/veinteLucas.jpg')"></money-item>
+
+    <money-item :value="10000" color="#2D639F"
+      :img_src="require('@/assets/diezLucas.jpg')"></money-item>
+
+    <money-item :value="5000" color="#E87A87"
+      :img_src="require('@/assets/cincoLucas.jpg')"></money-item>
+
+    <money-item :value="2000" color="#655A7A"
+      :img_src="require('@/assets/dosLucas.jpg')"></money-item>
+
+    <money-item :value="1000" color="#beca9a"
+      :img_src="require('@/assets/unaLuca.jpg')"></money-item>
+
+    <money-item :value="500" color="orange"
+      :img_src="require('@/assets/unaQuina.png')"></money-item>
+
+    <money-item :value="100" color="orange"
+      :img_src="require('@/assets/unaGamba.png')"></money-item>
+
+    <money-item :value="50" color="orange"
+      :img_src="require('@/assets/mediaGamba.png')"></money-item>
+
+    <money-item :value="10" color="orange"
+      :img_src="require('@/assets/unaChaucha.png')"></money-item>
   </div>
 </template>
 
 <script>
 import { Icon } from '@iconify/vue';
-import MoneyBar from './MoneyBar.vue';
+import MoneyItem from './MoneyItem.vue';
+import BalanceLabel from '@/components/BalanceLabel.vue';
 
 export default {
   components: {
     Icon,
-    MoneyBar,
+    MoneyItem,
+    BalanceLabel,
   },
   data() {
     return {
       amount: this.$amount,
       balance: this.$balanceGlobal,
       startClick: 0,
+      msg: '',
     };
   },
   methods: {
@@ -59,7 +99,7 @@ export default {
             const transactionMessage = this.appendMessage();
             this.DoTransaction(transactionMessage);
           } else {
-            this.DoTransaction();
+            this.DoTransaction(this.msg);
           }
         }
       }
@@ -79,20 +119,21 @@ export default {
       movements = JSON.stringify(movements);
       localStorage.setItem('movementsData', movements);
 
-      // Reset the accumulator.
+      // Reset the accumulator & message.
       this.amount = 0;
+      this.msg = '';
     },
     cancel() {
       this.amount = 0;
     },
     appendMessage() {
       // eslint-disable-next-line no-alert
-      const person = prompt('Transaction message (Optional)');
+      const mgs = prompt('Transaction message (Optional)');
       let text = '';
-      if (person == null || person === '') {
+      if (mgs == null || mgs === '') {
         text = '';
       } else {
-        text = `${person}`;
+        text = `${mgs}`;
       }
       return text;
     },
@@ -111,8 +152,28 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+input[type=text] {
+  font-family: var(--global-font-family-secondary);
+  border: none;
+  border-bottom: 2px solid #42b983;
+  padding: 12px 20px;
+}
+::-webkit-input-placeholder, :-moz-placeholder,
+::-moz-placeholder, :-ms-input-placeholder {
+   text-align: center;
+}
+
+.hide {
+  display: none;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 20px;
+}
 .badge {
+  font-family: var(--global-font-family-secondary);
   padding: 8px;
   border-radius: 15px;
 }
