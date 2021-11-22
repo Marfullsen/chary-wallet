@@ -1,8 +1,13 @@
 <template>
   <div>
     <h1 style="margin: 0">History</h1>
+    <h2>Daily Chart</h2>
     <daily-chart/>
+    <hr><hr>
+    <h2>Weekly Chart</h2>
     <weekly-chart/>
+    <hr><hr>
+    <h2>Monthly Chart</h2>
     <monthly-chart/>
   </div>
 </template>
