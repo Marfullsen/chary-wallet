@@ -1,7 +1,7 @@
 <template>
   <div>
     <canvas v-show="!empty" id='weekly-chart'></canvas>
-    <h2 v-show="empty">No transactions for this week</h2>
+    <h2 v-show="empty">No transactions for this month</h2>
   </div>
 </template>
 
@@ -39,17 +39,18 @@ export default {
       /* console.log(counterDate, this.dayScheme[counterDate], transactions[len - 1][2]); */
       if (len === 1) {
         this.dayScheme[counterDate] += Number(transactions[0][2]);
+        return true;
       }
       while (
         new Date(this.to_YY_MM_DD__Date(counterDate))
-        >= new Date(this.to_YY_MM_DD__Date(oneWeekAgoDate))
-        && len > 1) {
+        >= new Date(this.to_YY_MM_DD__Date(oneWeekAgoDate))) {
         /* console.log(len, counterDate,
           oneWeekAgoDate,
           today.toLocaleDateString(),
           transactions[len - 1][2]); */
         this.dayScheme[counterDate] += Number(transactions[len - 1][2]);
         len -= 1;
+        if (!len) break;
         counterDate = transactions[len - 1][0].slice(0, 10);
         /* console.log(counterDate, this.dayScheme[counterDate], transactions[len - 1][2]); */
       }

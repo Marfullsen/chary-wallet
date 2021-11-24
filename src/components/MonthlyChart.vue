@@ -36,6 +36,7 @@ export default {
       const persistedData = localStorage.getItem('movementsData');
       const transactions = JSON.parse(persistedData);
       let len = transactions.length;
+      if (!len) return false;
       const today = new Date();
       const thirtyOneDays = 1000 * 60 * 60 * 24 * 31;
       const oneMonthAgoDate = new Date(today - thirtyOneDays).toLocaleDateString();
@@ -50,6 +51,7 @@ export default {
         if (len === 0) break;
         counterDate = transactions[len - 1][0].slice(0, 10);
       }
+      return true;
     },
     checkIfData(last30days) {
       const arrayOfDays = Object.entries(last30days);

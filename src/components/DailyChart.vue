@@ -66,7 +66,7 @@ export default {
       const today = new Date(Date.now()).toLocaleDateString(); // 'dd-mm-yyyy'
       const persistedData = localStorage.getItem('movementsData');
       const transactions = JSON.parse(persistedData);
-      const len = transactions.length;
+      let len = transactions.length;
       if (!len) return false;
       const lastTransaction = transactions[len - 1][0]; // 'dd-mm-yyyy hh:mm:ss'
       const lastTransactionDate = lastTransaction.slice(0, 10); // 'dd-mm-yyyy'
@@ -76,16 +76,16 @@ export default {
           return true;
         }
         let isToday = true;
-        let index = 0;
         while (isToday) {
-          index += 1;
-          const transaction = transactions[len - index][0];
+          const transaction = transactions[len - 1][0];
           const transactionDate = transaction.slice(0, 10); // 'dd-mm-yyyy'
           const transactionTime = transaction.slice(11, 19); // 'hh:mm:ss'
-          const absoluteAmount = Math.abs(transactions[len - index][2]);
+          const absoluteAmount = Math.abs(transactions[len - 1][2]);
+          len -= 1;
           isToday = (today === transactionDate)
             ? this.stageByDate(transactionTime, absoluteAmount)
             : false;
+          if (!len) break;
         }
         return true;
       }
@@ -93,8 +93,6 @@ export default {
     },
   },
   mounted() {
-    // eslint-disable-next-line no-console
-    /* console.log(this.toDate('31-12-2021 01:02:03')); */
     this.showChart = this.isAnyTransactionToday();
     const ctx = document.getElementById('day-chart');
     const data = {
