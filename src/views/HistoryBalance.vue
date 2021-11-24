@@ -24,6 +24,19 @@ export default {
     WeeklyChart,
     MonthlyChart,
   },
+  methods: {
+    lookForPreviousData() {
+      const movementsData = localStorage.getItem('movementsData');
+      if (movementsData) {
+        this.movements = JSON.parse(movementsData);
+      } else {
+        localStorage.setItem('movementsData', '[]');
+      }
+    },
+  },
+  created() {
+    this.lookForPreviousData();
+  },
 };
 </script>
 
