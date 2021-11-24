@@ -136,3 +136,6 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [how to calculate the date that is X days ago?](https://stackoverflow.com/a/13838506)
 - [ForEach JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 - [Python Range(x) equivalent on JS](https://stackoverflow.com/questions/3895478/does-javascript-have-a-method-like-range-to-generate-a-range-within-the-supp)
+- [Object.values() in JS](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
+- [Sets in JS](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set)
+- [Disable prefer-destructuring-rule in eslint](https://eslint.org/docs/rules/prefer-destructuring)
