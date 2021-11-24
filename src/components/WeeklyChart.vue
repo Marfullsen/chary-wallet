@@ -100,13 +100,13 @@ export default {
       const countToSeven = [...Array(7).keys()];
       const todayBgColor = 'rgba(55, 255, 255, 0.2)';
       const todayBorderColor = 'rgba(55, 255, 255, 1)';
+      const today = new Date();
       countToSeven.forEach((num) => {
         const nextDay = num + 1 + todayDayInNumber;
         week.push(days[nextDay]);
         bgColors.push(styleForDays[nextDay].bgColor);
         borderColors.push(styleForDays[nextDay].borderColor);
 
-        const today = new Date();
         const daysAmount = 1000 * 60 * 60 * 24 * (6 - num);
         const xDaysAgo = new Date(today - daysAmount).toLocaleDateString();
         this.dayScheme[xDaysAgo] = 0;
