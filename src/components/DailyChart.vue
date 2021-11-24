@@ -67,9 +67,14 @@ export default {
       const persistedData = localStorage.getItem('movementsData');
       const transactions = JSON.parse(persistedData);
       const len = transactions.length;
+      if (!len) return false;
       const lastTransaction = transactions[len - 1][0]; // 'dd-mm-yyyy hh:mm:ss'
       const lastTransactionDate = lastTransaction.slice(0, 10); // 'dd-mm-yyyy'
       if (today === lastTransactionDate) {
+        if (len === 1) {
+          this.stageByDate(lastTransaction.slice(11, 19), Math.abs(transactions[0][2]));
+          return true;
+        }
         let isToday = true;
         let index = 0;
         while (isToday) {
@@ -95,7 +100,7 @@ export default {
     const data = {
       type: 'doughnut',
       data: {
-        labels: ['Morning (Blue)', 'Afternoon (Red)', 'Evening (Yellow)', 'Night (Purple)'],
+        labels: ['Morning', 'Afternoon', 'Evening', 'Night'],
         datasets: [
           {
             label: 'Daily',
