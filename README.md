@@ -133,3 +133,6 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [Press enter to submit with Vue3](https://www.codegrepper.com/code-examples/html/vue+3+enter+key)
 - [Avoid text selection CSS](https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting)
 - [Transform Style CSS](https://developer.mozilla.org/es/docs/Web/CSS/transform-style)
+- [how to calculate the date that is X days ago?](https://stackoverflow.com/a/13838506)
+- [ForEach JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [Python Range(x) equivalent on JS](https://stackoverflow.com/questions/3895478/does-javascript-have-a-method-like-range-to-generate-a-range-within-the-supp)
