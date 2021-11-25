@@ -16,12 +16,6 @@
   Wallet accounting notebook to keep a clear record of your finances. 💸💰👛
 </p>
 
-<p align="center">
-  <a href="https://github.com/Marfullsen/tidy-wallet/" rel="noopener">
-    <img src="./docs/img/ss-tidy-wallet-v1.png" alt="Three-Tidy-Wallet-Screenshots">
-  </a>
-</p>
-
 ## 📝 Table of Contents 📂
 
 - [About](#about)
@@ -37,6 +31,12 @@
 ## 🧐 About <a name = "about"></a>
 
 Digital Wallet Memo to keep the accounts of your finances. 💸💰
+
+<p align="center">
+  <a href="https://github.com/Marfullsen/tidy-wallet/" rel="noopener">
+    <img src="./docs/img/ss-tidy-wallet-v1.png" alt="Three-Tidy-Wallet-Screenshots">
+  </a>
+</p>
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -157,3 +157,5 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [FavIcon editor](https://www.xiconeditor.com/)
 - [Platzi - Deploy Vue3 to Github pages](https://platzi.com/tutoriales/1111-vuejs/3441-como-hacer-deploy-de-una-aplicacion-de-vuejs-hacia-github-pages-usando-vue-cli-3/)
 - [HTML title name using VueRouter](https://stackoverflow.com/a/69513429)
+- [can you use "-" instead of "/"with JavaScript Short Date format](https://stackoverflow.com/questions/36519383/can-you-use-instead-of-with-javascript-short-date-format)
+- [Regex any expresion](https://stackoverflow.com/questions/2912894/how-to-match-any-character-in-regular-expression)
