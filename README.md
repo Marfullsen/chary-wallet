@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./docs/img/tidy-wallet-logo.png" alt="Tidy-Wallet-logo">
+</p>
+
 <h1 align="center">💸 Tidy Wallet 💰</h1>
 
 <div align="center">
@@ -13,8 +17,8 @@
 </p>
 
 <p align="center">
-  <a href="./docs/img/Chary-Wallet.drawio.png" rel="noopener">
-    <img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
+  <a href="https://github.com/Marfullsen/tidy-wallet/" rel="noopener">
+    <img src="./docs/img/ss-tidy-wallet-v1.png" alt="Three-Tidy-Wallet-Screenshots">
   </a>
 </p>
 
@@ -93,6 +97,10 @@ It's recommended to clone **index.html** as **404.html** when deploying to GitHu
 
 See also the list of [contributors](./contributors) who participated in this project.
 
+# Mockup
+
+<img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
+
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - [All Emojis](https://github.com/scotch-io/All-Github-Emoji-Icons)
@@ -146,3 +154,6 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [How to add a property at the beginning of an object in javascript](https://stackoverflow.com/questions/19457337/how-to-add-a-property-at-the-beginning-of-an-object-in-javascript)
 - Font Gabriola for the logo
 - Citrine Brown for font, Web Chocolate for bg & Seal Brown for borders from [Palette of Brown](https://www.schemecolor.com/all-brown.php)
+- [FavIcon editor](https://www.xiconeditor.com/)
+- [Platzi - Deploy Vue3 to Github pages](https://platzi.com/tutoriales/1111-vuejs/3441-como-hacer-deploy-de-una-aplicacion-de-vuejs-hacia-github-pages-usando-vue-cli-3/)
+- [HTML title name using VueRouter](https://stackoverflow.com/a/69513429)
