@@ -36,6 +36,7 @@ export default {
   },
   created() {
     this.lookForPreviousData();
+    document.title = 'History - Tidy Wallet';
   },
 };
 </script>

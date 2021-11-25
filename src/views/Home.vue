@@ -12,5 +12,8 @@ export default {
   components: {
     MoneyMenu,
   },
+  created() {
+    document.title = 'Home - Tidy Wallet';
+  },
 };
 </script>

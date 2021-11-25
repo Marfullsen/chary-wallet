@@ -68,6 +68,9 @@ export default {
       return `${sign}${pointSeparator}`;
     },
   },
+  created() {
+    document.title = 'Recent - Tidy Wallet';
+  },
   mounted() {
     this.lookForPreviousData();
   },
