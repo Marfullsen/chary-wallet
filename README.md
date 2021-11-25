@@ -1,4 +1,4 @@
-<h1 align="center">💸 Chary Wallet 💰</h1>
+<h1 align="center">💸 Tidy Wallet 💰</h1>
 
 <div align="center">
 
@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-  Digital Wallet Memo to keep the accounts of your finances. 💸💰👛
+  Wallet accounting notebook to keep a clear record of your finances. 💸💰👛
 </p>
 
 <p align="center">
@@ -139,3 +139,8 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [Object.values() in JS](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values)
 - [Sets in JS](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Set)
 - [Disable prefer-destructuring-rule in eslint](https://eslint.org/docs/rules/prefer-destructuring)
+- [Line charts for chart.js](https://www.chartjs.org/docs/latest/charts/line.html#general)
+- [method filter js](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+- [Some to avoid breaking forEach js](https://stackoverflow.com/questions/6260756/how-to-stop-javascript-foreach)
+- [shift js](https://www.w3schools.com/jsref/jsref_shift.asp)
+- [How to add a property at the beginning of an object in javascript](https://stackoverflow.com/questions/19457337/how-to-add-a-property-at-the-beginning-of-an-object-in-javascript)
