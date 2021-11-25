@@ -88,7 +88,7 @@ export default {
         // [...Array(31).keys()].map((x) => x + 1),
         datasets: [
           {
-            label: 'Montly',
+            label: 'Montly Sum',
             data: Object.values(this.last30days),
             backgroundColor: [
               'rgba(54, 162, 235, 0.2)',

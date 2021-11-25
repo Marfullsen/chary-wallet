@@ -134,7 +134,7 @@ export default {
         labels: weekDays,
         datasets: [
           {
-            label: 'Weekly',
+            label: 'Weekly Sum',
             data: statistics,
             backgroundColor: bgColors,
             borderColor: borderColors,

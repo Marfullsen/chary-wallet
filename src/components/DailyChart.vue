@@ -101,7 +101,7 @@ export default {
         labels: ['Morning', 'Afternoon', 'Evening', 'Night'],
         datasets: [
           {
-            label: 'Daily',
+            label: 'Daily Absolute Sum',
             data: [
               this.getTransactions('morning'),
               this.getTransactions('afternoon'),

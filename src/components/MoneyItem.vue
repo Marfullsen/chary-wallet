@@ -57,4 +57,14 @@ export default {
   width: 75px;
   padding: 15px;
 }
+
+@media (min-width: 1024px) {
+  .bill {
+    width: auto;
+    height: 125px;
+  }
+  .coin {
+  width: 100px;
+  }
+}
 </style>
