@@ -65,7 +65,7 @@ export default {
           zeroesRow = false;
         }
       }
-      const temp = {};
+      const temp = { '': 0 };
       function addToTemp(dayNotZero) {
         // eslint-disable-next-line prefer-destructuring
         temp[dayNotZero[0]] = dayNotZero[1];
