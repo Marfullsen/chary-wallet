@@ -10,7 +10,7 @@
       ><Icon icon="simple-line-icons:notebook" width="30"
     />&nbsp;Recent</router-link>
   </div>
-  <router-view />
+  <router-view class="full-height"/>
   <div id="nav" class="nav mobile">
     <router-link to="/history"
       ><Icon icon="simple-line-icons:hourglass" width="25"
@@ -70,6 +70,11 @@ export default {
   right: 0;
   top: 0;
 }
+
+.full-height {
+  min-height: 90vh;
+}
+
 .centrado {
   display: flex;
   justify-content: space-around;
