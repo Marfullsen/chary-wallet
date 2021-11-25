@@ -144,3 +144,5 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [Some to avoid breaking forEach js](https://stackoverflow.com/questions/6260756/how-to-stop-javascript-foreach)
 - [shift js](https://www.w3schools.com/jsref/jsref_shift.asp)
 - [How to add a property at the beginning of an object in javascript](https://stackoverflow.com/questions/19457337/how-to-add-a-property-at-the-beginning-of-an-object-in-javascript)
+- Font Gabriola for the logo
+- Citrine Brown for font, Web Chocolate for bg & Seal Brown for borders from [Palette of Brown](https://www.schemecolor.com/all-brown.php)
