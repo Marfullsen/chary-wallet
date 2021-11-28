@@ -9,6 +9,9 @@ npm run build
 # navigate into the build output directory
 cd dist
 
+# Create 404 same as index for proper vue-routing redirecting.
+cp index.html 404.html
+
 git init
 git add -A
 git commit -m 'deploy'
