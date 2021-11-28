@@ -68,7 +68,8 @@ export default {
       const transactions = JSON.parse(persistedData);
       let len = transactions.length;
       if (!len) return false;
-      const lastTransaction = transactions[len - 1][0]; // 'dd-mm-yyyy hh:mm:ss'
+      let lastTransaction = transactions[len - 1][0]; // 'dd-mm-yyyy hh:mm:ss'
+      lastTransaction = transactions.replace(',', ''); // Delete comma when 'dd/mm/yyyy, hh:mm:ss'
       const lastTransactionDate = lastTransaction.slice(0, 10); // 'dd-mm-yyyy'
       if (today === lastTransactionDate) {
         if (len === 1) {
@@ -77,7 +78,8 @@ export default {
         }
         let isToday = true;
         while (isToday) {
-          const transaction = transactions[len - 1][0];
+          let transaction = transactions[len - 1][0];
+          transaction = transaction.replace(',', ''); // Delete comma when 'dd/mm/yyyy, hh:mm:ss'
           const transactionDate = transaction.slice(0, 10); // 'dd-mm-yyyy'
           const transactionTime = transaction.slice(11, 19); // 'hh:mm:ss'
           const absoluteAmount = Math.abs(transactions[len - 1][2]);
