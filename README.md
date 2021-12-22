@@ -1,5 +1,7 @@
 <p align="center">
-  <img src="./docs/img/tidy-wallet-logo.png" alt="Tidy-Wallet-logo">
+  <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+    <img src="./docs/img/tidy-wallet-logo.png" alt="Tidy-Wallet-logo">
+  </a>
 </p>
 
 <h1 align="center">💸 Tidy Wallet 💰</h1>
@@ -9,6 +11,7 @@
 [![Vue-3.2.4](https://img.shields.io/badge/Vue-3.2.4-blue.svg "Badge Vue.js")](https://v3.vuejs.org/)
 [![Vue-cli-4.5.13](https://img.shields.io/badge/Vue--CLI-4.5.13-brightgreen.svg "Badge VueCLI")](https://cli.vuejs.org/)
 [![Vue-router-4.0.11](https://img.shields.io/badge/Vue--router-4.0.11-yellow.svg "Badge VueRouter")](https://router.vuejs.org/)
+[![gh-pages](https://img.shields.io/badge/Available-online!-lightgray.svg)](https://marfullsen.github.io/tidy-wallet/)
 
 </div>
 
@@ -30,10 +33,10 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Digital Wallet Memo to keep the accounts of your finances. 💸💰
+[Digital Wallet Memo](https://marfullsen.github.io/tidy-wallet/) to keep the accounts of your finances. 💸💰
 
 <p align="center">
-  <a href="https://github.com/Marfullsen/tidy-wallet/" rel="noopener">
+  <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
     <img src="./docs/img/ss-tidy-wallet-v1.png" alt="Three-Tidy-Wallet-Screenshots">
   </a>
 </p>
@@ -67,15 +70,6 @@ npm run serve
 npm run build
 ```
 
-##### Lints and fixes files
-```
-npm run lint
-```
-
-##### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
 ## 🎈 Usage <a name = "usage"></a>
 
 Just click the buttons and see the magic.
@@ -97,9 +91,19 @@ It's recommended to clone **index.html** as **404.html** when deploying to GitHu
 
 See also the list of [contributors](./contributors) who participated in this project.
 
-# Mockup
+# Mockups
 
-<img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
+<a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+  <img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
+</a>
+
+<a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+  <img src="./docs/img/tablet-mockup.png" alt="Tidy-Wallet-mobile-mockup">
+</a>
+
+<a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+  <img src="./docs/img/first-mobile-mockup.png" alt="Tidy-Wallet-tablet-mockup">
+</a>
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
