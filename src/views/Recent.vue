@@ -42,16 +42,41 @@
           </span>
         </td>
       </tr>
+      <tr v-if="isEmpty">
+        <td>
+          <label>It seems so empty here.</label>
+        </td>
+        <td>
+          <input type="file"
+            name="fields[assetsFieldHandle][]" id="assetsFieldHandle" @change="readHistory"
+            ref="file" accept=".json">
+          <label for="assetsFieldHandle">
+            <span for="assetsFieldHandle" class="migrate">Try importing data!</span>
+          </label>
+        </td>
+      </tr>
+      <tr v-else>
+        <td>
+          <label>Click the button to export all.</label>
+        </td>
+        <td>
+          <button class="migrate" @click="saveHistory()">export all data</button>
+        </td>
+      </tr>
     </table>
   </div>
 </template>
 
 <script>
+const FileSaver = require('file-saver');
+
 export default {
   data() {
     return {
       balance: this.$balanceGlobal,
       transactions: [],
+      filelist: [],
+      isEmpty: true,
     };
   },
   methods: {
@@ -59,9 +84,31 @@ export default {
       const movementsData = localStorage.getItem('movementsData');
       if (movementsData) {
         this.transactions = JSON.parse(movementsData);
+        this.isEmpty = !this.transactions.length || false;
       } else {
         localStorage.setItem('movementsData', '[]');
       }
+    },
+    saveHistory() {
+      const movementsData = localStorage.getItem('movementsData');
+      const fecha = new Date().toLocaleString('en-ZA').replace(/[^0-9\\.]+/g, '_');
+      const filename = `tidy_wallet_history_${fecha}.json`;
+      if (movementsData) {
+        const blob = new Blob([movementsData], { type: 'text/plain;charset=utf-8' });
+        FileSaver.saveAs(blob, filename);
+      }
+    },
+    readHistory() {
+      this.filelist = [...this.$refs.file.files];
+      const file = this.filelist[0];
+      const reader = new FileReader();
+      const self = this;
+      reader.onload = function cargado(e) {
+        self.transactions = JSON.parse(e.target.result);
+        localStorage.setItem('movementsData', e.target.result);
+        self.isEmpty = !self.transactions.length || false;
+      };
+      reader.readAsText(file);
     },
     clp(amount, sign = '') {
       const pointSeparator = (Number(amount)).toLocaleString('es-cl');
