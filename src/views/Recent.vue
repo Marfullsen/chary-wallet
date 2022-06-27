@@ -152,6 +152,13 @@ export default {
   background: rgba(54, 162, 235, 0.2);
 }
 
+.migrate {
+  padding: 8px;
+  border-radius: 15px;
+  border: solid 1px lightgray;
+  background: rgba(232, 235, 54, 0.2);
+}
+
 .opt-label {
   display: none;
 }
