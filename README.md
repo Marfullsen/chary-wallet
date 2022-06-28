@@ -1,8 +1,8 @@
-<p align="center">
+<div align="center">
   <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
     <img src="./docs/img/tidy-wallet-logo.png" alt="Tidy-Wallet-logo">
   </a>
-</p>
+</div>
 
 <h1 align="center">💸 Tidy Wallet 💰</h1>
 
@@ -15,9 +15,14 @@
 
 </div>
 
-<p align="center">
+<div align="center">
   Wallet accounting notebook to keep a clear record of your finances. 💸💰👛
-</p>
+</div>
+
+## 📘 News and updates. 👀
+- Export all data.
+- Import your data.
+- Json files supported for import & export.
 
 ## 📝 Table of Contents 📂
 
@@ -35,11 +40,11 @@
 
 [Digital Wallet Memo](https://marfullsen.github.io/tidy-wallet/) to keep the accounts of your finances. 💸💰
 
-<p align="center">
+<div align="center">
   <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
     <img src="./docs/img/ss-tidy-wallet-v1.png" alt="Three-Tidy-Wallet-Screenshots">
   </a>
-</p>
+</div>
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -79,31 +84,34 @@ Just click the buttons and see the magic.
 It's recommended to clone **index.html** as **404.html** when deploying to GitHub Pages.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
+This project was built entirely with **Vue.js** (FrontEnd Framework).
+
+- [VueJS](https://vuejs.org/) - Web Framework
+
+Nothing meaningless was used in the project. 
 
 - ~~[MongoDB](https://www.mongodb.com/) - Database~~
 - ~~[Express](https://expressjs.com/) - Server Framework~~
-- [VueJS](https://vuejs.org/) - Web Framework
 - ~~[NodeJs](https://nodejs.org/en/) - Server Environment~~
 
 ## ✍️ Authors 👌 <a name = "authors"></a>
 
-- 🗿 [@Marfullsen](https://github.com/Marfullsen) - Idea, Initial work, all work.
-
-See also the list of [contributors](./contributors) who participated in this project.
+- 🗿 [@Marfullsen](https://github.com/Marfullsen) - Author & Maintainer.
 
 # Mockups
+<div align="center">
+  <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+    <img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
+  </a>
 
-<a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
-  <img src="./docs/img/Chary-Wallet.drawio.png" alt="Mockup-chary-wallet">
-</a>
+  <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+    <img src="./docs/img/tablet-mockup.png" alt="Tidy-Wallet-mobile-mockup">
+  </a>
 
-<a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
-  <img src="./docs/img/tablet-mockup.png" alt="Tidy-Wallet-mobile-mockup">
-</a>
-
-<a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
-  <img src="./docs/img/first-mobile-mockup.png" alt="Tidy-Wallet-tablet-mockup">
-</a>
+  <a href="https://marfullsen.github.io/tidy-wallet/" rel="noopener">
+    <img src="./docs/img/first-mobile-mockup.png" alt="Tidy-Wallet-tablet-mockup">
+  </a>
+</div>
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
@@ -163,3 +171,4 @@ See also the list of [contributors](./contributors) who participated in this pro
 - [HTML title name using VueRouter](https://stackoverflow.com/a/69513429)
 - [can you use "-" instead of "/"with JavaScript Short Date format](https://stackoverflow.com/questions/36519383/can-you-use-instead-of-with-javascript-short-date-format)
 - [Regex any expresion](https://stackoverflow.com/questions/2912894/how-to-match-any-character-in-regular-expression)
+- [FileSaver.js](https://github.com/eligrey/FileSaver.js)
