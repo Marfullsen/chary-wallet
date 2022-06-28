@@ -172,3 +172,5 @@ Nothing meaningless was used in the project.
 - [can you use "-" instead of "/"with JavaScript Short Date format](https://stackoverflow.com/questions/36519383/can-you-use-instead-of-with-javascript-short-date-format)
 - [Regex any expresion](https://stackoverflow.com/questions/2912894/how-to-match-any-character-in-regular-expression)
 - [FileSaver.js](https://github.com/eligrey/FileSaver.js)
+- [using date in git bash commit message](https://stackoverflow.com/questions/60687670/using-date-in-git-bash-commit-message)
+- [Including a date or other variable in the git commit message](https://stackoverflow.com/questions/44635861/including-a-date-or-other-variable-in-the-git-commit-message)
